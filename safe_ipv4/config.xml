@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+     xmlns:gap = "http://phonegap.com/ns/1.0"
+         id = "com.dicatti.ola"
+         versionCode = "10"  
+         version = "1.0.2" > 
+         
+         <name>safe IPV4</name> 
+         
+         <description>
+            Aplicativo para reservar de forma segura seu IPV4
+         </description> 
+         
+         <author href="https://univox.com.br" email="caio@univox.com.br"> 
+            Caio Dicatti
+         </author>   
+        <icon src="res/icon/icon.png" />
+        <gap:splash src="res/screen/screen.png"  /> 
+   
+    </widget> 

@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" type="text/css"
+        href="css/bootstrap.min.css"/>
+       <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css"/>
+       <link rel="stylesheet" type="text/css" href="css/estilo.css">
+       
+
+        <title>Safe IPV4</title>
+    </head>
+    <body class="fundo">
+         <div class="container" id="pag1">
+
+            <br/><br/>
+            <img class="img-fluid" src="logo-ipv4.png" alt="Responsive image"/>
+            <br/><br/>
+           
+             <div class="form-group">
+
+                    <label class="col-sm-2 col-form-label letra-menu-label">IP Inicial</label>
+                    <div class="input-group"> 
+                        <input type="number" class="form-control" id="txtIPinicial1" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+                       
+                        <input type="number" class="form-control" id="txtIPinicial2" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+
+                        <input type="number" class="form-control" id="txtIPinicial3" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+
+                        <input type="number" class="form-control" id="txtIPinicial4" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+                        
+                     </div>
+                     <br/>
+
+                    <label class="col-sm-2 col-form-label letra-menu-label">IP Final</label> 
+                    <div class="input-group">                    
+                        <input type="number" class="form-control" id="txtIPfinal1" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+
+                        <input type="number" class="form-control" id="txtIPfinal2" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+
+                        <input type="number" class="form-control" id="txtIPfinal3" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+
+                        <input type="number" class="form-control" id="txtIPfinal4" placeholder="000" 
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "3" />
+                    </div>
+                    <br/>
+
+                    <br/><br/><br/>
+                    <div align="center">
+                        <button type="button" class="btn btn-padrao" id="btnExibeLista">
+                                <i class="fas fa-bars"></i> Exibir Lista
+                        </button>
+                     </div>
+
+                        <div id="erro" class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" onclick="$('#erro').hide()">&times;</button>
+                            IP fora da faixa, por favor, digite dois IP's válidos
+                        </div>
+                     
+             </div>
+
+         </div> 
+
+         <div class="container" id="pag2">
+                 
+                <h1 class="letra-cabecalho-label">Lista de IP's </h1>
+                <br/><br/>
+
+                <div class="list-group" id="listaIps">
+                    <!-- <a href="#" class="list-group-item list-group-item-action">1 - 0.0.0.0</a>
+                    <a href="#" class="list-group-item list-group-item-action">2 - 0.0.0.0</a>
+                    <a href="#" class="list-group-item list-group-item-action">3 - 0.0.0.0</a> -->
+                </div>
+
+                <br/>
+             <div align="center">
+                <button type="button" class="btn btn-info" id="btnVoltarHome">
+                        <i class="fas fa-backward"></i> Voltar
+                </button>
+             </div>  
+
+             <div id="alertaAdicionado" class="alert alert-secondary alert-dismissible fade show posicao_alert">
+                <button type="button" class="close" onclick="$('#alertaAdicionado').hide()">&times;</button>
+                IP reservado com sucesso!
+            </div>
+
+            <div id="alertaAlterado" class="alert alert-secondary alert-dismissible fade show posicao_alert">
+                <button type="button" class="close" onclick="$('#alertaAlterado').hide()">&times;</button>
+                IP alterado com sucesso!
+            </div>
+
+            <div id="alertaExcluido" class="alert alert-secondary alert-dismissible fade show posicao_alert">
+                <button type="button" class="close" onclick="$('#alertaExcluido').hide()">&times;</button>
+                IP excluido com sucesso!
+            </div>
+             
+             
+                
+         </div>
+         
+
+         <div class="container" id="pag3">
+                <br/>
+                <div class="letra-cabecalho-label" id="ipSelecionado"></div>
+                <br/>
+
+            <label class="col-sm-2 col-form-label letra-menu-label">Código</label> 
+            <input type="text" class="form-control" id="txtCodigo" placeholder="Código" />
+            <br/><br/>
+
+            <label class="col-sm-2 col-form-label letra-menu-label">Nome</label> 
+            <input type="text" class="form-control" id="txtNome" placeholder="Nome" />
+            <br/><br/>
+
+            <label class="col-sm-2 col-form-label letra-menu-label">Descrição</label> 
+            <input type="text" class="form-control" id="txtDescricao" placeholder="Descrição" />
+            <br/><br/>
+
+            <div align="center">
+                    <button type="button" class="btn btn-padrao" id="btnSalvar">
+                            <i class="fas fa-download"></i> Salvar
+                    </button>
+
+                    <button type="button" class="btn btn-danger" id="btnExcluir">
+                            <i class="fas fa-file-excel"></i> Excluir
+                    </button>
+
+                    <button type="button" class="btn btn-info" id="btnVoltarLista">
+                            <i class="fas fa-backward"></i> Voltar
+                    </button>
+                 </div> 
+
+         </div>
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/dao.js"></script>
+        <script src="js/scripts.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,58 @@
+.fundo {
+  background-color: #ffffff;
+
+}
+
+.cabecalho {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba(9, 97, 0, 0.411);
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    text-align: center;
+    color: #229408;
+    font-size: 30;
+    font-weight: bold;
+  }
+
+  .card-body-estilo {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+
+  .btn-padrao {
+    color: #fff;
+    background-color: #35682a;
+    border-color: #229408;
+
+  }
+
+  .letra-menu-label {
+    color: #229408;
+    font-weight: bold;
+
+  }
+
+  .letra-cabecalho-label {
+    color: #229408;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .posicao_alert {
+    position: fixed;
+    top: 520px;
+    right: 50px;
+  }
+
+  .cor-check{
+    color: #229408;
+  }
